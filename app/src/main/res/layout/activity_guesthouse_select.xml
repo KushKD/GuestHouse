@@ -1,0 +1,339 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:id="@+id/maincontainer">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/button_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:layout_weight="1" >
+
+
+    </LinearLayout>
+
+
+    <!-- Button 1 -->
+    <LinearLayout
+        android:id="@+id/button_guesthouseone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dip"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d3d2d2"
+            android:gravity="left|center_horizontal|center_vertical"
+            android:id="@+id/button_guest_house_one"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+            <!-- ListRow Left side Thumbnail image -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:padding="3dip" >
+                <ImageView
+                    android:id="@+id/list_image_guest_house_one"
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_textview_guest_house_one"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/list_image_guest_house_one"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dip"
+                android:padding="3dip" >
+
+                <TextView
+                    android:id="@+id/text_view_guesthouseonerooms_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Rooms Available"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthouseone_total_rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Total Rooms"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthouseone_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="CircuitHouse"
+                    android:paddingBottom ="10dip"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Button 2 -->
+    <LinearLayout
+        android:id="@+id/button_guesthousetwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dip"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d3d2d2"
+            android:gravity="right|center_horizontal|center_vertical"
+            android:id="@+id/button_guest_house_two"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+            <!-- ListRow Left side Thumbnail image -->
+            <LinearLayout
+                android:id="@+id/thumbnail_guest_house_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dip"
+                android:padding="3dip" >
+                <ImageView
+                    android:id="@+id/list_image_guest_house_two"
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_textview_guest_house_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dip"
+                android:layout_alignTop="@+id/thumbnail_guest_house_two"
+                android:layout_toLeftOf="@+id/thumbnail_guest_house_two"
+                android:layout_toStartOf="@+id/thumbnail_guest_house_two">
+
+
+                <TextView
+                    android:id="@+id/text_view_guesthousetwo_rooms_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Rooms Available"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousetwo_total_rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Total Rooms"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousetwo_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Surajtal House"
+                    android:paddingBottom ="10dip"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- Button 3 -->
+    <LinearLayout
+        android:id="@+id/button_guesthousethree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dip"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d3d2d2"
+            android:gravity="left|center_horizontal|center_vertical"
+            android:id="@+id/button_district"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+            <!-- ListRow Left side Thumbnail image -->
+            <LinearLayout
+                android:id="@+id/tguest_house_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dip"
+                android:padding="3dip" >
+                <ImageView
+                    android:id="@+id/list_image_guest_house_three"
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_textview_guest_house_three"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/tguest_house_three"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dip"
+                android:padding="3dip" >
+
+                <TextView
+                    android:id="@+id/text_view_guesthousethree__available"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Rooms Available"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousethree__total_rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Total Rooms"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousethree_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Kailash House"
+                    android:paddingBottom ="10dip"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- Button 4-->
+    <LinearLayout
+        android:id="@+id/button_guesthousefour"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dip"
+        android:layout_margin="5dip"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d3d2d2"
+            android:gravity="right|center_horizontal|center_vertical"
+            android:id="@+id/button_guest_house_four"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+            <!-- ListRow Left side Thumbnail image -->
+            <LinearLayout
+                android:id="@+id/thumbnail_guest_house_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dip"
+                android:padding="3dip" >
+                <ImageView
+                    android:id="@+id/list_image_guest_house_four"
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_textview_guest_house_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dip"
+                android:layout_alignTop="@+id/thumbnail_guest_house_four"
+                android:layout_toLeftOf="@+id/thumbnail_guest_house_four"
+                android:layout_toStartOf="@+id/thumbnail_guest_house_four">
+
+
+                <TextView
+                    android:id="@+id/text_view_guesthousefour_rooms_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Rooms Available"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousefour_total_rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Total Rooms"
+                    android:paddingBottom ="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_guesthousefour_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="75dip"
+                    android:layout_centerVertical="true"
+                    android:text="Dhauladhar House"
+                    android:paddingBottom ="10dip"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
