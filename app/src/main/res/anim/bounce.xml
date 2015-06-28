@@ -11,8 +11,8 @@
         android:toYScale="1.0" /> -->
 
     <translate
-        android:fromYDelta="-100%p"
+        android:fromXDelta="100%p"
         android:toYDelta="0"
-        android:duration="3500"/>
+        android:duration="1000"/>
 
 </set>

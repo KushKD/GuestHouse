@@ -1,10 +1,14 @@
 package epds.guesthouse;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class activity_guesthouse_select extends AppCompatActivity implements Animation.AnimationListener {
 
@@ -13,7 +17,7 @@ public class activity_guesthouse_select extends AppCompatActivity implements Ani
     LinearLayout GH1 , GH2, GH3, GH4;
 
     // Animation
-    Animation animBounce;
+    Animation animBounce , animBounceLR;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +27,45 @@ public class activity_guesthouse_select extends AppCompatActivity implements Ani
 
         if(Initialize_Flag) {
             animBounce = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
+            animBounceLR = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bouncelefttoright);
             animBounce.setAnimationListener(this);
+            animBounceLR.setAnimationListener(this);
             startanimation();
         }
+
+        GH1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GH1.setBackgroundColor(Color.GREEN);
+                Toast.makeText(activity_guesthouse_select.this,"First Guest House",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        GH2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GH1.setBackgroundColor(Color.GREEN);
+                Toast.makeText(activity_guesthouse_select.this,"Second Guest House",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        GH3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GH1.setBackgroundColor(Color.GREEN);
+                Toast.makeText(activity_guesthouse_select.this,"Third Guest House",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        GH4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GH1.setBackgroundColor(Color.GREEN);
+                Toast.makeText(activity_guesthouse_select.this,"Fourth Guest House",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
 
     }
@@ -49,9 +89,9 @@ public class activity_guesthouse_select extends AppCompatActivity implements Ani
 
    private void startanimation(){
        GH1.startAnimation(animBounce);
-       GH2.startAnimation(animBounce);
+       GH2.startAnimation(animBounceLR);
        GH3.startAnimation(animBounce);
-       GH4.startAnimation(animBounce);
+       GH4.startAnimation(animBounceLR);
 
     }
 
