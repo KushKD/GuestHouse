@@ -4,4 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_activity_guesthouse_select">activity_guesthouse_select</string>
+    <string name="title_activity_activity__search">Activity_Search</string>
+    <string name="title_activity_activity__splash">Activity_Splash</string>
+    <string name="title_activity_activity__hep">Activity_Hep</string>
 </resources>

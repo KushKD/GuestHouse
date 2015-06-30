@@ -16,10 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       <!-- <activity
+        <!--
+        <activity
             android:name=".activity_guesthouse_select"
             android:label="@string/title_activity_activity_guesthouse_select" >
-        </activity> -->
+        </activity>
+        -->
+        <activity
+            android:name=".Activity_Search"
+            android:label="@string/title_activity_activity__search" >
+        </activity>
+        <activity
+            android:name=".Activity_Splash"
+            android:label="@string/title_activity_activity__splash" >
+        </activity>
+        <activity
+            android:name=".Activity_Hep"
+            android:label="@string/title_activity_activity__hep" >
+        </activity>
     </application>
 
 </manifest>
