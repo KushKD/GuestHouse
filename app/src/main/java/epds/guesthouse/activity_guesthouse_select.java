@@ -1,5 +1,7 @@
 package epds.guesthouse;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +12,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class activity_guesthouse_select extends AppCompatActivity implements Animation.AnimationListener {
+import com.marcohc.robotocalendar.test;
+
+
+public class activity_guesthouse_select extends test implements Animation.AnimationListener {
 
     Boolean Initialize_Flag = false;
 
@@ -38,6 +43,9 @@ public class activity_guesthouse_select extends AppCompatActivity implements Ani
             public void onClick(View v) {
                 //GH1.setBackgroundColor(Color.GREEN);
                 Toast.makeText(activity_guesthouse_select.this,"First Guest House",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(activity_guesthouse_select.this,Activity_Search.class);
+                startActivity(i);
+
             }
         });
 
