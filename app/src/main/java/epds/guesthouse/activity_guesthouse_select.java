@@ -37,10 +37,8 @@ public class activity_guesthouse_select extends test implements Animation.Animat
         GH1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //GH1.setBackgroundColor(Color.GREEN);
-                Toast.makeText(activity_guesthouse_select.this,"First Guest House",Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity_guesthouse_select.this,Activity_Calender.class);
-                startActivity(i);
+                // TODO: 01/07/15
+
 
             }
         });
@@ -48,24 +46,24 @@ public class activity_guesthouse_select extends test implements Animation.Animat
         GH2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //GH1.setBackgroundColor(Color.GREEN);
-                Toast.makeText(activity_guesthouse_select.this,"Second Guest House",Toast.LENGTH_SHORT).show();
+                // TODO: 01/07/15
+
             }
         });
 
         GH3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //GH1.setBackgroundColor(Color.GREEN);
-                Toast.makeText(activity_guesthouse_select.this,"Third Guest House",Toast.LENGTH_SHORT).show();
+                // TODO: 01/07/15
+
             }
         });
 
         GH4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //GH1.setBackgroundColor(Color.GREEN);
-                Toast.makeText(activity_guesthouse_select.this,"Fourth Guest House",Toast.LENGTH_SHORT).show();
+                // TODO: 01/07/15
+
             }
         });
 
