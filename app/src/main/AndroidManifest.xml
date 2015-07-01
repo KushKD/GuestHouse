@@ -19,9 +19,10 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
+
+            android:name=".Activity_Splash"
+            android:label="@string/title_activity_activity__splash"
+             >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +41,9 @@
             android:label="@string/title_activity_activity__search" >
         </activity>
         <activity
-            android:name=".Activity_Splash"
-            android:label="@string/title_activity_activity__splash" >
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateHidden">
         </activity>
         <activity
             android:name=".Activity_Hep"
