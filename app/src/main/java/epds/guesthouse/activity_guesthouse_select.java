@@ -1,11 +1,7 @@
 package epds.guesthouse;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -43,7 +39,7 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             public void onClick(View v) {
                 //GH1.setBackgroundColor(Color.GREEN);
                 Toast.makeText(activity_guesthouse_select.this,"First Guest House",Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity_guesthouse_select.this,Activity_Search.class);
+                Intent i = new Intent(activity_guesthouse_select.this,Activity_Calender.class);
                 startActivity(i);
 
             }

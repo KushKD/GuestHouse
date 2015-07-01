@@ -7,4 +7,12 @@
     <string name="title_activity_activity__search">Activity_Search</string>
     <string name="title_activity_activity__splash">Activity_Splash</string>
     <string name="title_activity_activity__hep">Activity_Hep</string>
+    <string name="title_activity_search">Search</string>
+    <string name="guest_house_prompt">Choose a Nordic Country</string>
+    <string-array name="guest_house_array">
+        <item>Circuit</item>
+        <item>Kailash</item>
+        <item>Surajtal</item>
+        <item>Dhauladhar</item>
+    </string-array>
 </resources>
