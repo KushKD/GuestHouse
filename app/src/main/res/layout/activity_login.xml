@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal|center_vertical|center"
     android:orientation="vertical"
-    android:background="@mipmap/loginbackground"
+    android:background="@drawable/log"
     tools:context="epds.guesthouse.LoginActivity"
     android:weightSum="3">
-
+    <!-- android:background="@mipmap/login"  -->
     <!-- Header -->
 
    <LinearLayout
@@ -56,9 +56,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/framlayout_transparent"
         android:background="#999999"
         android:layout_weight="2"
-        android:alpha=".5">
+        >
 
         <!-- OLD CODE -->
         <!-- Login progress -->
@@ -83,6 +84,7 @@
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
+            android:layout_margin="10dip"
             android:gravity="center|center_horizontal|center_vertical"
             android:layout_height="match_parent"
             android:orientation="vertical">

@@ -26,6 +26,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -47,6 +48,7 @@ public class LoginActivity extends Activity  {
 
     // UI references.
     private AutoCompleteTextView mEmailView;
+    private FrameLayout frame;
     private EditText mPasswordView;
     private View mProgressView;
     private View mEmailLoginFormView;
@@ -60,7 +62,16 @@ public class LoginActivity extends Activity  {
         setContentView(R.layout.activity_login);
 
 
+        frame = (FrameLayout)findViewById(R.id.framlayout_transparent);
 
+
+        /*
+        int color = Color.TRANSPARENT;
+            Drawable background = view.getBackground();
+            if (background instanceof ColorDrawable)
+                color = ((ColorDrawable) background).getColor();
+
+         */
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
