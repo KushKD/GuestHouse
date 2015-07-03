@@ -11,6 +11,9 @@ import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build.VERSION;
@@ -28,6 +31,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -63,15 +67,10 @@ public class LoginActivity extends Activity  {
 
 
         frame = (FrameLayout)findViewById(R.id.framlayout_transparent);
+        frame.setBackgroundColor(Color.parseColor("#8C999999"));
 
 
-        /*
-        int color = Color.TRANSPARENT;
-            Drawable background = view.getBackground();
-            if (background instanceof ColorDrawable)
-                color = ((ColorDrawable) background).getColor();
 
-         */
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
