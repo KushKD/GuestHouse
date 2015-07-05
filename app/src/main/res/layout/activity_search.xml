@@ -2,7 +2,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#8C999999">
+    android:background="@drawable/log">
+
+
 
     <LinearLayout
         android:id="@+id/ll1"
@@ -19,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textSize="20sp"
-            android:background="#682715"
+            android:background="#F2682715"
             android:textColor="#FFFFFF"
             android:gravity="center|center_horizontal|center_vertical"
             android:text="Select Destination"/>
@@ -29,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="#FFFFFF"
             android:prompt="@string/guest_house_prompt" />
 
         <!-- android:entries="@array/guest_house_array"  -->
@@ -39,6 +42,7 @@
         android:id="@+id/ll2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#A6999999"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -50,7 +54,7 @@
             <TextView
                 android:textSize="20sp"
                 android:layout_margin="10dp"
-                android:background="#682715"
+                android:background="#F2682715"
                 android:textColor="#FFFFFF"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:layout_width="match_parent"
@@ -71,7 +75,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal|center|center_vertical"
-                android:textColor="#682715"
+                android:textColor="#F2682715"
                 android:padding="10dip"
                 android:text="Check In "
                 android:layout_weight="1"/>
@@ -98,7 +102,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal|center|center_vertical"
-                android:textColor="#682715"
+                android:textColor="#F2682715"
                 android:padding="10dip"
                 android:layout_weight="1"/>
 
@@ -121,6 +125,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center|center_horizontal|center_vertical"
+        android:background="#A6999999"
         android:orientation="horizontal">
 
         <!-- Search -->
@@ -128,7 +133,7 @@
 
             android:textSize="15sp"
             android:layout_margin="5dp"
-            android:background="#682715"
+            android:background="#F2682715"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,7 +144,7 @@
         <Button
             android:textSize="15sp"
             android:layout_margin="5dp"
-            android:background="#682715"
+            android:background="#F2682715"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:id="@+id/search_guest_house_search"
@@ -148,5 +153,6 @@
             android:text="Search"/>
 
     </LinearLayout>
+
 
 </LinearLayout>

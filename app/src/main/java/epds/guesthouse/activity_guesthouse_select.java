@@ -3,6 +3,8 @@ package epds.guesthouse;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
@@ -22,6 +24,8 @@ public class activity_guesthouse_select extends test implements Animation.Animat
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_guesthouse_select);
 
         Initialize_Flag =  initialize_controls();// Animation
