@@ -2,6 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+
     android:background="@drawable/log">
 
 
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center|center_horizontal|center_vertical"
+        android:gravity="top|center_horizontal|center_vertical"
         android:orientation="vertical">
 
         <!-- Destination -->
@@ -19,7 +20,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:textSize="20sp"
             android:background="#F2682715"
             android:textColor="#FFFFFF"
@@ -84,6 +84,9 @@
                 android:id="@+id/check_in_guest_house_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textColor="#682715"
+                android:text="Select Date"
                 android:layout_weight="1"/>
 
 
@@ -102,7 +105,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal|center|center_vertical"
-                android:textColor="#F2682715"
+                android:textColor="#682715"
                 android:padding="10dip"
                 android:layout_weight="1"/>
 
@@ -110,6 +113,9 @@
                 android:id="@+id/check_out_guest_house_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textColor="#682715"
+                android:text="Select Date"
                 android:layout_weight="1"/>
 
 
@@ -124,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center|center_horizontal|center_vertical"
+        android:gravity="bottom|center_horizontal|center_vertical"
         android:background="#A6999999"
         android:orientation="horizontal">
 
@@ -133,7 +139,7 @@
 
             android:textSize="15sp"
             android:layout_margin="5dp"
-            android:background="#F2682715"
+            android:background="#682715"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,7 +150,7 @@
         <Button
             android:textSize="15sp"
             android:layout_margin="5dp"
-            android:background="#F2682715"
+            android:background="#682715"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:id="@+id/search_guest_house_search"
