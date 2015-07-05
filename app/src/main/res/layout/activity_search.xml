@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:visibility="gone"
         android:gravity="top|center_horizontal|center_vertical"
         android:orientation="vertical">
 
@@ -43,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#A6999999"
+        android:gravity="center|center_horizontal|center_vertical"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -53,6 +55,7 @@
 
             <TextView
                 android:textSize="20sp"
+                android:padding="15dp"
                 android:layout_margin="10dp"
                 android:background="#F2682715"
                 android:textColor="#FFFFFF"
@@ -129,7 +132,7 @@
         android:id="@+id/ll3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:gravity="bottom|center_horizontal|center_vertical"
         android:background="#A6999999"
         android:orientation="horizontal">
