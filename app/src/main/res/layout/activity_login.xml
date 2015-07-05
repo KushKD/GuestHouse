@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/framlayout_transparent"
         android:layout_weight="2"
+        android:background="#8C999999"
         >
 
         <!-- OLD CODE -->
@@ -83,8 +84,8 @@
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
-            android:layout_margin="10dip"
-            android:gravity="center|center_horizontal|center_vertical"
+            android:layout_margin="20dip"
+            android:gravity="bottom|center_horizontal|center_vertical"
             android:layout_height="match_parent"
             android:orientation="vertical">
 

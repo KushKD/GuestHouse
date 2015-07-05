@@ -66,8 +66,7 @@ public class LoginActivity extends Activity  {
         setContentView(R.layout.activity_login);
 
 
-        frame = (FrameLayout)findViewById(R.id.framlayout_transparent);
-        frame.setBackgroundColor(Color.parseColor("#8C999999"));
+
 
 
 

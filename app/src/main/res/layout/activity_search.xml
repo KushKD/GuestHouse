@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#8C999999">
 
     <LinearLayout
         android:id="@+id/ll1"
@@ -16,6 +17,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:background="#682715"
+            android:textColor="#FFFFFF"
             android:gravity="center|center_horizontal|center_vertical"
             android:text="Select Destination"/>
 
@@ -23,8 +28,10 @@
         <Spinner android:id="@+id/spinner_guest_house_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:prompt="@string/guest_house_prompt"
-            android:entries="@array/guest_house_array" />
+            android:layout_margin="10dp"
+            android:prompt="@string/guest_house_prompt" />
+
+        <!-- android:entries="@array/guest_house_array"  -->
 
     </LinearLayout>
 
@@ -37,9 +44,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content">
 
             <TextView
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:background="#682715"
+                android:textColor="#FFFFFF"
+                android:gravity="center|center_horizontal|center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Select Dates"/>
@@ -49,11 +62,17 @@
         <!-- Dates Select checkin -->
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center|center_vertical"
+                android:textColor="#682715"
+                android:padding="10dip"
                 android:text="Check In "
                 android:layout_weight="1"/>
 
@@ -69,12 +88,18 @@
         <!-- Select Dates Check out -->
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Check Out"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center|center_vertical"
+                android:textColor="#682715"
+                android:padding="10dip"
                 android:layout_weight="1"/>
 
             <Button
@@ -95,10 +120,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:gravity="center|center_horizontal|center_vertical"
         android:orientation="horizontal">
 
         <!-- Search -->
         <Button
+
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:background="#682715"
+            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -106,6 +137,10 @@
             android:text="View Guest Houses"/>
 
         <Button
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:background="#682715"
+            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:id="@+id/search_guest_house_search"
             android:layout_height="wrap_content"

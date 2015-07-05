@@ -1,5 +1,6 @@
 package epds.guesthouse;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,23 +8,29 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class Search extends AppCompatActivity {
+public class Search extends Activity {
 
     Boolean Initialize_Flag = false;
     private Spinner spinner_guest_house;
     private Button search_guest_house, view_guest_house;
     private Button check_in_guest_house, check_out_guest_house;
+    private String [] guest_houses = {"Circuit","Dhauladhar","Surajtal","Kailash"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+       // this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         Initialize_Flag = initialize_controls();// Animation
         if (Initialize_Flag) {
@@ -32,6 +39,8 @@ public class Search extends AppCompatActivity {
             // animBounce.setAnimationListener(this);
             // animBounceLR.setAnimationListener(this);
             // startanimation();
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item,guest_houses);
+            spinner_guest_house.setAdapter(adapter);
 
 
         }
