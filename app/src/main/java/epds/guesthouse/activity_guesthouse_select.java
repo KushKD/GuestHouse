@@ -18,6 +18,7 @@ public class activity_guesthouse_select extends test implements Animation.Animat
     Boolean Initialize_Flag = false;
 
     LinearLayout GH1 , GH2, GH3, GH4;
+    Constants App_Constants = new Constants();
 
     // Animation
     Animation animBounce , animBounceLR;
@@ -42,8 +43,13 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             @Override
             public void onClick(View v) {
                 // TODO: 01/07/15
-
-
+                Intent i = new Intent(activity_guesthouse_select.this , List_Rooms_Activity.class);
+                //Create the bundle
+                Bundle bundle = new Bundle();
+                //Add your data to bundle
+                bundle.putString("id", App_Constants.GuestHouseID_Circuit);
+                //Fire that second activity
+                startActivity(i);
             }
         });
 

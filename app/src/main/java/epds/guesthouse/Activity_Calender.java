@@ -26,7 +26,7 @@ package epds.guesthouse;
     /**
      * Sample Activity
      *
-     * @author Marco Hernaiz Cao
+     * @author Kush Kumar Dhawan
      */
     public class Activity_Calender extends Activity implements RobotoCalendarListener {
 
