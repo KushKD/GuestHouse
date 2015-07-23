@@ -40,6 +40,8 @@ package epds.guesthouse;
         DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate;
 
+
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
 
@@ -135,6 +137,7 @@ package epds.guesthouse;
             currentCalendar.add(Calendar.MONTH, currentMonthIndex);
             robotoCalendarView.initializeCalendar(currentCalendar);
         }
+
     }
 
 

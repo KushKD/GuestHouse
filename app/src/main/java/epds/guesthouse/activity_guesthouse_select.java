@@ -44,12 +44,9 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             public void onClick(View v) {
                 // TODO: 01/07/15
                 Intent i = new Intent(activity_guesthouse_select.this , List_Rooms_Activity.class);
-                //Create the bundle
-                Bundle bundle = new Bundle();
-                //Add your data to bundle
-                bundle.putString("id", App_Constants.GuestHouseID_Circuit);
-                //Fire that second activity
+                i.putExtra("id", App_Constants.GuestHouseID_Circuit);
                 startActivity(i);
+
             }
         });
 
@@ -57,6 +54,9 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             @Override
             public void onClick(View v) {
                 // TODO: 01/07/15
+                Intent i = new Intent(activity_guesthouse_select.this , List_Rooms_Activity.class);
+                i.putExtra("id", App_Constants.GuestHouseID_Surajtal);
+                startActivity(i);
 
             }
         });
@@ -65,6 +65,9 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             @Override
             public void onClick(View v) {
                 // TODO: 01/07/15
+                Intent i = new Intent(activity_guesthouse_select.this , List_Rooms_Activity.class);
+                i.putExtra("id", App_Constants.GuestHouseID_Kailash);
+                startActivity(i);
 
             }
         });
@@ -74,6 +77,9 @@ public class activity_guesthouse_select extends test implements Animation.Animat
             public void onClick(View v) {
                 // TODO: 01/07/15
 
+                Intent i = new Intent(activity_guesthouse_select.this , List_Rooms_Activity.class);
+                i.putExtra("id", App_Constants.GuestHouseID_Dhauldhar);
+                startActivity(i);
             }
         });
 

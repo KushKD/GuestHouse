@@ -41,8 +41,6 @@ import com.google.android.gms.common.SignInButton;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 public class LoginActivity extends Activity  {
 
 
@@ -67,13 +65,6 @@ public class LoginActivity extends Activity  {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-
-
-
-
-
-
-
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -212,27 +203,6 @@ public class LoginActivity extends Activity  {
 //            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
 //        }
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Use an AsyncTask to fetch the user's email addresses on a background thread, and update
      * the email text field with results on the main UI thread.

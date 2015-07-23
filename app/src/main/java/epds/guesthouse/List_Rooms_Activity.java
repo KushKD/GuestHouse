@@ -2,6 +2,7 @@ package epds.guesthouse;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -25,19 +26,19 @@ public class List_Rooms_Activity extends Activity {
     ProgressBar  pb;
     List<MyTask> tasks;
     public String Guest_House_ID;
+
+    List<GuestHousePojo> guestHouseList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list__rooms_);
-
-        //		Initialize the TextView for vertical scrolling
         output = (TextView) findViewById(R.id.textView);
         output.setMovementMethod(new ScrollingMovementMethod());
-        /*
-         Getting data from the Activity
-         */
-        Bundle bundle = getIntent().getExtras();
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
         Guest_House_ID = bundle.getString("id");
+
 
         pb = (ProgressBar) findViewById(R.id.progressBar1);
         pb.setVisibility(View.INVISIBLE);
@@ -53,11 +54,11 @@ public class List_Rooms_Activity extends Activity {
 
     protected void updateDisplay() {
 
-       /* if (flowerList != null) {
-            for (Flower flower : flowerList) {
-                output.append(flower.getName() + "\n");
+        if (guestHouseList != null) {
+            for (GuestHousePojo guesthouse : guestHouseList) {
+                output.append(guesthouse.getRoomNo() +"\t" + guesthouse.getOrientation() +"\t"+ guesthouse.getType_Of_Room() + "\n");
             }
-        }*/
+        }
 
     }
 
@@ -113,12 +114,13 @@ public class List_Rooms_Activity extends Activity {
         @Override
         protected void onPostExecute(String result) {
 
-           // flowerList = FlowerJSONParser.parseFeed(result);
-          //  updateDisplay();
+            guestHouseList = GuestHouseJsonParser.parseFeed(result);
+            updateDisplay();
 
             tasks.remove(this);
             if (tasks.size() == 0) {
                 pb.setVisibility(View.INVISIBLE);
+               // output.setText(result);
             }
 
         }
