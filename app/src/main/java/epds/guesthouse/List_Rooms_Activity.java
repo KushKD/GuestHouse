@@ -1,6 +1,7 @@
 package epds.guesthouse;
 
 import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class List_Rooms_Activity extends Activity {
+public class List_Rooms_Activity extends ListActivity {
 
     TextView output;
     ProgressBar  pb;
@@ -32,8 +33,8 @@ public class List_Rooms_Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list__rooms_);
-        output = (TextView) findViewById(R.id.textView);
-        output.setMovementMethod(new ScrollingMovementMethod());
+      //  output = (TextView) findViewById(R.id.textView);
+       // output.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -54,11 +55,14 @@ public class List_Rooms_Activity extends Activity {
 
     protected void updateDisplay() {
 
-        if (guestHouseList != null) {
-            for (GuestHousePojo guesthouse : guestHouseList) {
-                output.append(guesthouse.getRoomNo() +"\t" + guesthouse.getOrientation() +"\t"+ guesthouse.getType_Of_Room() + "\n");
-            }
-        }
+//        if (guestHouseList != null) {
+//            for (GuestHousePojo guesthouse : guestHouseList) {
+//                output.append(guesthouse.getRoomNo() +"\t" + guesthouse.getOrientation() +"\t"+ guesthouse.getType_Of_Room() + "\n");
+//            }
+//        }
+
+        GuestHouseAdapter adapter = new GuestHouseAdapter(this, R.layout.item_flower, guestHouseList);
+        setListAdapter(adapter);
 
     }
 

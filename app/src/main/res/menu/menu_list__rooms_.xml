@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="org.example.networktest.app.MainActivity" >
     <item android:id="@+id/action_get_data"
-        android:title="Get Data"
+        android:title="Show Rooms"
         android:orderInCategory="100"
         android:showAsAction="always"/>
 </menu>
