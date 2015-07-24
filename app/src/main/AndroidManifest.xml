@@ -68,6 +68,10 @@
             android:name=".List_Rooms_Activity"
             android:label="@string/title_activity_list__rooms_" >
         </activity>
+        <activity
+            android:name=".GuestHouseDetails"
+            android:label="@string/title_activity_guest_house_details" >
+        </activity>
     </application>
 
 </manifest>

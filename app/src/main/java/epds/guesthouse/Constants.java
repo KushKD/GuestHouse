@@ -10,4 +10,6 @@ public class Constants  {
     public static final String GuestHouseID_Surajtal = "2";
     public static final String GuestHouseID_Kailash = "3";
     public static final String GuestHouseID_Dhauldhar = "4";
+
+    public static final String Room_DETAILS_TO_PASS = "room_details_to_pass";
 }

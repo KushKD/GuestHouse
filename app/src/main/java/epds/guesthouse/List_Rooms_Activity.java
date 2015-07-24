@@ -13,6 +13,8 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,18 +23,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class List_Rooms_Activity extends ListActivity {
+public class List_Rooms_Activity extends Activity {
 
     TextView output;
     ProgressBar  pb;
     List<MyTask> tasks;
     public String Guest_House_ID;
+    ListView LV;
 
     List<GuestHousePojo> guestHouseList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list__rooms_);
+
+        LV = (ListView)findViewById(R.id.list);
       //  output = (TextView) findViewById(R.id.textView);
        // output.setMovementMethod(new ScrollingMovementMethod());
 
@@ -45,6 +50,27 @@ public class List_Rooms_Activity extends ListActivity {
         pb.setVisibility(View.INVISIBLE);
 
         tasks = new ArrayList<>();
+
+
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                // TODO Auto-generated method stub
+
+                GuestHousePojo guestHouseDetails = (GuestHousePojo)	parent.getItemAtPosition(position);
+
+                Intent roomDetails = new Intent();
+                roomDetails.putExtra(Constants.Room_DETAILS_TO_PASS, guestHouseDetails);
+                roomDetails.setClass(List_Rooms_Activity.this, GuestHouseDetails.class);
+
+                // update database for my favorite member
+              //  memberDetailsDBAdapter.updateFavrouiteList(searchMemberDetails);
+                startActivity(roomDetails);
+               // finish();
+
+            }
+        });
 
     }
 
@@ -62,7 +88,7 @@ public class List_Rooms_Activity extends ListActivity {
 //        }
 
         GuestHouseAdapter adapter = new GuestHouseAdapter(this, R.layout.item_flower, guestHouseList);
-        setListAdapter(adapter);
+        LV.setAdapter(adapter);
 
     }
 
@@ -84,6 +110,8 @@ public class List_Rooms_Activity extends ListActivity {
         }
         return false;
     }
+
+
 
     protected boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -16,4 +16,5 @@
         <item>Dhauladhar</item>
     </string-array>
     <string name="title_activity_list__rooms_">List_Rooms_Activity</string>
+    <string name="title_activity_guest_house_details">GuestHouseDetails</string>
 </resources>
