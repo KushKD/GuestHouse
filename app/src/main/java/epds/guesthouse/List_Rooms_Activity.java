@@ -103,7 +103,7 @@ public class List_Rooms_Activity extends Activity {
         if (item.getItemId() == R.id.action_get_data) {
             if (isOnline()) {
                // requestData("http://services.hanselandpetal.com/feeds/flowers.json");
-                requestData("http://10.0.2.2:8001/api/GuestHouse/"+Guest_House_ID);
+                requestData("http://10.0.2.2:8002/api/GuestHouse/"+Guest_House_ID);
             } else {
                 Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
             }
