@@ -2,7 +2,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-
     android:background="@drawable/log">
 
 
@@ -16,24 +15,7 @@
         android:gravity="top|center_horizontal|center_vertical"
         android:orientation="vertical">
 
-        <!-- Destination -->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:background="#F2682715"
-            android:textColor="#FFFFFF"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Select Destination"/>
-
-
-        <Spinner android:id="@+id/spinner_guest_house_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#FFFFFF"
-            android:prompt="@string/guest_house_prompt" />
 
         <!-- android:entries="@array/guest_house_array"  -->
 
@@ -48,9 +30,37 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
+
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+        <!-- Destination -->
+
+        <TextView
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:background="#F2682715"
+                android:textColor="#FFFFFF"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Room Type"/>
+
+
+        <Spinner android:id="@+id/spinner_guest_house_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:prompt="@string/guest_house_prompt" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
