@@ -37,7 +37,7 @@ package epds.guesthouse;
         private Button bt;
 
         DateFormat originalFormat = new SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH);
-        DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
         String formattedDate;
 
 

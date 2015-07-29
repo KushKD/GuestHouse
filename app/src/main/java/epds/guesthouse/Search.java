@@ -1,6 +1,7 @@
 package epds.guesthouse;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -26,13 +27,17 @@ import java.util.List;
 
 public class Search extends Activity {
 
-    List<MyTask> tasks;
+
     List<RoomTypePojo> RoomTypeList;
-    ProgressBar pb;
     Boolean Initialize_Flag = false;
     private Spinner spinner_guest_house;
     private Button search_guest_house, view_guest_house;
     private Button check_in_guest_house, check_out_guest_house;
+    String Room_Type = null;
+    int roomt ;
+    String roomType = null;
+    String checkin_Date = null;
+    String checkout_Date = null;
 
 
     @Override
@@ -42,28 +47,31 @@ public class Search extends Activity {
 
        // this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        if (isOnline()) {
-            // requestData("http://services.hanselandpetal.com/feeds/flowers.json");
-            //  requestData("http://10.0.2.2:8002/api/GuestHouse/"+Guest_House_ID);   //epds Lap
-            requestData("http://10.0.2.2:8001/api/GuestHouse");
 
 
-
-        } else {
-            Toast.makeText(this, "Network isn't available . Please Connect To Internet", Toast.LENGTH_LONG).show();
-        }
-
-        /*Initialize_Flag = initialize_controls();// Animation
+        Initialize_Flag = initialize_controls();// Animation
         if (Initialize_Flag) {
             //animBounce = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
             // animBounceLR = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bouncelefttoright);
             // animBounce.setAnimationListener(this);
             // animBounceLR.setAnimationListener(this);
             // startanimation();
+            if (isOnline()) {
+                // requestData("http://services.hanselandpetal.com/feeds/flowers.json");
+                //  requestData("http://10.0.2.2:8002/api/GuestHouse/"+Guest_House_ID);   //epds Lap
+
+                Toast.makeText(getApplication(),"Starting AsyNc Task",Toast.LENGTH_LONG).show();
+                requestData("http://10.0.2.2:8001/api/GuestHouse");
 
 
 
-        }*/
+            } else {
+                Toast.makeText(this, "Network isn't available . Please Connect To Internet", Toast.LENGTH_LONG).show();
+            }
+
+
+
+        }
 
 
         view_guest_house.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +85,7 @@ public class Search extends Activity {
         check_in_guest_house.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i_calender = new Intent(Search.this , Activity_Calender.class);
+                Intent i_calender = new Intent(Search.this, Activity_Calender.class);
                 startActivityForResult(i_calender, 10);
             }
         });
@@ -89,6 +97,76 @@ public class Search extends Activity {
                 startActivityForResult(i_check_out_calender,11);
             }
         });
+
+        search_guest_house.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getdata();
+            }
+        });
+    }
+
+    private void getdata() {
+
+      int  Room_Type_Position = spinner_guest_house.getSelectedItemPosition();
+
+        if(Room_Type_Position<=0 || Room_Type_Position>0){
+         roomt = RoomTypeList.get(Room_Type_Position).getRt_Id();
+            Toast.makeText(getApplicationContext(),Integer.toString(Room_Type_Position)+"==="+ Integer.toString(roomt) , Toast.LENGTH_LONG).show();
+            roomType = Integer.toString(roomt);
+
+            if(roomType!=null && roomType.length()!= 0){
+
+                checkin_Date = check_in_guest_house.getText().toString().trim();
+                if(checkin_Date!=null && checkin_Date.length()!=0){
+
+                    checkout_Date = check_out_guest_house.getText().toString().trim();
+                    if (checkout_Date!=null &&  checkout_Date.length()!=0){
+
+                        //Check Date Here
+                        Boolean check_Date_Service = DateCheck.Check_Date(checkin_Date,checkout_Date);
+
+                        if(check_Date_Service){
+                            Toast.makeText(getApplication(),roomType + "==" + checkin_Date+ "=="+ checkout_Date,Toast.LENGTH_LONG).show();
+
+                            //Async Task Start Here
+                            if(isOnline()){
+
+                            }else{
+                                Toast.makeText(getApplication(),"You are not connected to Internet. Please connect to Internet",Toast.LENGTH_LONG).show();
+                            }
+                        }else{
+                            Toast.makeText(getApplication(), "Please Enter Valid Dates",Toast.LENGTH_LONG).show();
+                        }
+
+
+
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Check Out date cannot be empty" , Toast.LENGTH_LONG).show();
+                    }
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Check In date cannot be empty" , Toast.LENGTH_LONG).show();
+                }
+
+
+            }else{
+                Toast.makeText(getApplicationContext(),"Room type cannot be empty" , Toast.LENGTH_LONG).show();
+            }
+        }else{
+            Toast.makeText(getApplicationContext(),Integer.toString(Room_Type_Position)+"==="+ "No Data" , Toast.LENGTH_LONG).show();
+        }
+
+       /* switch(Room_Type){
+
+            case "Double Bedded Room" : Toast.makeText(getApplicationContext(),"we Got"+ "Double Bedded Room" , Toast.LENGTH_LONG).show();
+            case "Hostel Store" : Toast.makeText(getApplicationContext(),"we Got"+ "Hostel Store" , Toast.LENGTH_LONG).show();
+            case "Suit" : Toast.makeText(getApplicationContext(),"we Got"+ "Suit" , Toast.LENGTH_LONG).show();
+            case "Three Bedded Room" : Toast.makeText(getApplicationContext(),"we Got"+ "Three Bedded Room" , Toast.LENGTH_LONG).show();
+
+           // default: Toast.makeText(getApplicationContext(),"we Got Nothing for You" , Toast.LENGTH_LONG).show();
+        }*/
+        //http://localhost:8001/api/GuestHouse?checkin_GH=20/07/2015&checkout_GH=21/07/2015&Typeid_gh=7
     }
 
     private void requestData(String uri) {
@@ -142,6 +220,7 @@ public class Search extends Activity {
             check_in_guest_house = (Button) findViewById(R.id.check_in_guest_house_search);
             check_out_guest_house = (Button) findViewById(R.id.check_out_guest_house_search);
 
+
             return true;
 
         } catch (Exception e) {
@@ -176,15 +255,14 @@ public class Search extends Activity {
 
     private class MyTask extends AsyncTask<String, String, String> {
 
+        private final ProgressDialog dialog = new ProgressDialog(Search.this);
+
         @Override
         protected void onPreExecute() {
-//			updateDisplay("Starting task");
-
-            if (tasks.size() == 0) {
-                pb.setVisibility(View.VISIBLE);
-            }
-            tasks.add(this);
+            this.dialog.setMessage("Getting Types Of Rooms");
+            this.dialog.show();
         }
+
 
         @Override
         protected String doInBackground(String... params) {
@@ -198,12 +276,9 @@ public class Search extends Activity {
 
             RoomTypeList = GuestHouseJsonParser.parseFeedRoom(result);
             updateDisplay();
+            this.dialog.dismiss();
 
-            tasks.remove(this);
-            if (tasks.size() == 0) {
-                pb.setVisibility(View.INVISIBLE);
-                // output.setText(result);
-            }
+
 
         }
 
