@@ -14,6 +14,7 @@ import java.net.URL;
 public class HttpManager  {
     public static String getData(String uri) {
 
+        System.out.print(uri);
         BufferedReader reader = null;
 
         try {

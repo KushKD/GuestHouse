@@ -72,6 +72,10 @@
             android:name=".GuestHouseDetails"
             android:label="@string/title_activity_guest_house_details" >
         </activity>
+        <activity
+            android:name=".List_Rooms_search"
+            android:label="@string/title_activity_list__rooms_search" >
+        </activity>
     </application>
 
 </manifest>

@@ -17,4 +17,5 @@
     </string-array>
     <string name="title_activity_list__rooms_">List_Rooms_Activity</string>
     <string name="title_activity_guest_house_details">GuestHouseDetails</string>
+    <string name="title_activity_list__rooms_search">List_Rooms_search</string>
 </resources>

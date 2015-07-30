@@ -118,10 +118,10 @@ public class Search extends Activity {
             if(roomType!=null && roomType.length()!= 0){
 
                 checkin_Date = check_in_guest_house.getText().toString().trim();
-                if(checkin_Date!=null && checkin_Date.length()!=0){
+                if(checkin_Date!=null && checkin_Date.length()!=0 ){
 
                     checkout_Date = check_out_guest_house.getText().toString().trim();
-                    if (checkout_Date!=null &&  checkout_Date.length()!=0){
+                    if (checkout_Date!=null &&  checkout_Date.length()!=0 ){
 
                         //Check Date Here
                         Boolean check_Date_Service = DateCheck.Check_Date(checkin_Date,checkout_Date);
@@ -131,6 +131,19 @@ public class Search extends Activity {
 
                             //Async Task Start Here
                             if(isOnline()){
+
+                                StringBuilder sb = new StringBuilder();
+                                sb.append("http://10.0.2.2:8001/api/GuestHouse?");
+                                sb.append("checkin_GH=");sb.append(checkin_Date+"&");
+                                sb.append("checkout_GH=");sb.append(checkout_Date+"&");
+                                sb.append("Typeid_gh=");sb.append(roomType);
+
+                                String URL_Service = sb.toString();
+                                Toast.makeText(getApplication(),URL_Service,Toast.LENGTH_LONG).show();
+
+                                Intent i = new Intent(Search.this , List_Rooms_search.class);
+                                i.putExtra("url", URL_Service);
+                                startActivity(i);
 
                             }else{
                                 Toast.makeText(getApplication(),"You are not connected to Internet. Please connect to Internet",Toast.LENGTH_LONG).show();
