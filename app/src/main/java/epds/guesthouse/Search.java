@@ -61,7 +61,7 @@ public class Search extends Activity {
                 //  requestData("http://10.0.2.2:8002/api/GuestHouse/"+Guest_House_ID);   //epds Lap
 
                 Toast.makeText(getApplication(),"Starting AsyNc Task",Toast.LENGTH_LONG).show();
-                requestData("http://10.0.2.2:8001/api/GuestHouse");
+                requestData("http://10.241.13.65:8001/api/GuestHouse");
 
 
 
@@ -134,7 +134,7 @@ public class Search extends Activity {
 
                                 StringBuilder sb = new StringBuilder();
                                 //10.241.13.65:8001   //10.0.2.2:8001
-                                sb.append("http://10.241.13.65::8001/api/GuestHouse?");
+                                sb.append("http://10.241.13.65:8001/api/GuestHouse?");
                                 sb.append("checkin_GH=");sb.append(checkin_Date+"&");
                                 sb.append("checkout_GH=");sb.append(checkout_Date+"&");
                                 sb.append("Typeid_gh=");sb.append(roomType);
