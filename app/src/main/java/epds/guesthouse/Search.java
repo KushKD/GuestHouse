@@ -133,7 +133,8 @@ public class Search extends Activity {
                             if(isOnline()){
 
                                 StringBuilder sb = new StringBuilder();
-                                sb.append("http://10.0.2.2:8001/api/GuestHouse?");
+                                //10.241.13.65:8001   //10.0.2.2:8001
+                                sb.append("http://10.241.13.65::8001/api/GuestHouse?");
                                 sb.append("checkin_GH=");sb.append(checkin_Date+"&");
                                 sb.append("checkout_GH=");sb.append(checkout_Date+"&");
                                 sb.append("Typeid_gh=");sb.append(roomType);
