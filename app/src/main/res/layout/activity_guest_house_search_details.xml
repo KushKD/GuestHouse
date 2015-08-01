@@ -135,5 +135,41 @@
             android:textStyle="bold"
             android:layout_margin="5dp"
             android:textColor="#F2682715"/>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal|center_vertical"
+            android:background="#A6999999"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <!-- Search -->
+            <Button
+
+                android:textSize="15sp"
+                android:layout_margin="5dp"
+                android:background="#682715"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:id="@+id/view_guest_house_search"
+                android:text="Back"/>
+
+            <Button
+                android:textSize="15sp"
+                android:layout_margin="5dp"
+                android:background="#682715"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:id="@+id/search_guest_house_search"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book Room"/>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

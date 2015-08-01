@@ -46,7 +46,7 @@ public class GuestHouseSearchDetails extends Activity {
         GuestHouseSearchPojo guestHousesearchDetails =    (GuestHouseSearchPojo) getRoomDetailsIntent.getSerializableExtra("Details");
 
 
-        SrNo_Search.setText(guestHousesearchDetails.getSrNo_Search());
+        SrNo_Search.setText(Integer.toString(guestHousesearchDetails.getSrNo_Search()));
         Hostel_Search.setText(guestHousesearchDetails.getHostel_Search());
         RoomNo_Search.setText(guestHousesearchDetails.getRoomNo_Search());
         Floor_Entrance_Search.setText(guestHousesearchDetails.getFloor_Entrance_Search());
@@ -55,8 +55,8 @@ public class GuestHouseSearchDetails extends Activity {
         BathFacility_Search.setText(guestHousesearchDetails.getBathFacility_Search());
         TVFacility_Search.setText(guestHousesearchDetails.getTVFacility_Search());
         RoomCondition_Search.setText(guestHousesearchDetails.getRoomCondition_Search());
-        BedCapacity_Search.setText(guestHousesearchDetails.getBedCapacity_Search());
-        RoomBook_Search.setText(guestHousesearchDetails.getRoomBook_Search());
+        BedCapacity_Search.setText(Integer.toString(guestHousesearchDetails.getBedCapacity_Search()));
+        RoomBook_Search.setText(Integer.toString(guestHousesearchDetails.getRoomBook_Search()));
 
 
     }
