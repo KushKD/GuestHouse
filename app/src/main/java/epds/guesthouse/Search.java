@@ -57,11 +57,10 @@ public class Search extends Activity {
             // animBounceLR.setAnimationListener(this);
             // startanimation();
             if (isOnline()) {
-                // requestData("http://services.hanselandpetal.com/feeds/flowers.json");
-                //  requestData("http://10.0.2.2:8002/api/GuestHouse/"+Guest_House_ID);   //epds Lap
+                
 
                 Toast.makeText(getApplication(),"Starting AsyNc Task",Toast.LENGTH_LONG).show();
-                requestData("http://10.241.13.65:8001/api/GuestHouse");
+                requestData("");
 
 
 
@@ -133,8 +132,8 @@ public class Search extends Activity {
                             if(isOnline()){
 
                                 StringBuilder sb = new StringBuilder();
-                                //10.241.13.65:8001   //10.0.2.2:8001
-                                sb.append("http://10.241.13.65:8001/api/GuestHouse?");
+                               
+                                sb.append("enter url");
                                 sb.append("checkin_GH=");sb.append(checkin_Date+"&");
                                 sb.append("checkout_GH=");sb.append(checkout_Date+"&");
                                 sb.append("Typeid_gh=");sb.append(roomType);
@@ -171,16 +170,7 @@ public class Search extends Activity {
             Toast.makeText(getApplicationContext(),Integer.toString(Room_Type_Position)+"==="+ "No Data" , Toast.LENGTH_LONG).show();
         }
 
-       /* switch(Room_Type){
-
-            case "Double Bedded Room" : Toast.makeText(getApplicationContext(),"we Got"+ "Double Bedded Room" , Toast.LENGTH_LONG).show();
-            case "Hostel Store" : Toast.makeText(getApplicationContext(),"we Got"+ "Hostel Store" , Toast.LENGTH_LONG).show();
-            case "Suit" : Toast.makeText(getApplicationContext(),"we Got"+ "Suit" , Toast.LENGTH_LONG).show();
-            case "Three Bedded Room" : Toast.makeText(getApplicationContext(),"we Got"+ "Three Bedded Room" , Toast.LENGTH_LONG).show();
-
-           // default: Toast.makeText(getApplicationContext(),"we Got Nothing for You" , Toast.LENGTH_LONG).show();
-        }*/
-        //http://localhost:8001/api/GuestHouse?checkin_GH=20/07/2015&checkout_GH=21/07/2015&Typeid_gh=7
+     
     }
 
     private void requestData(String uri) {
@@ -256,14 +246,7 @@ public class Search extends Activity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item,guest_houses);
         spinner_guest_house.setAdapter(adapter);
-//        if (guestHouseList != null) {
-//            for (GuestHousePojo guesthouse : guestHouseList) {
-//                output.append(guesthouse.getRoomNo() +"\t" + guesthouse.getOrientation() +"\t"+ guesthouse.getType_Of_Room() + "\n");
-//            }
-//        }
 
-       // GuestHouseAdapter adapter = new GuestHouseAdapter(this, R.layout.item_flower, guestHouseList);
-       // LV.setAdapter(adapter);
 
     }
 
