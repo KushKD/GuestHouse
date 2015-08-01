@@ -24,12 +24,8 @@ import java.util.Map;
  */
 public class RestApi {
 
-    //LOCAL
-    //  private final String urlString = "http://10.0.2.2:6005/Handler1.ashx";   //6003
-
-    //Cloud Working  10.25.128.163
-    private final String urlString = "http://164.100.88.163/AndroidMobService1/Handler1.ashx";
-
+   
+    private final String urlString //not working
 
     private static String convertStreamToUTF8String(InputStream stream) throws IOException {
         String result = "";
