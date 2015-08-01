@@ -62,16 +62,16 @@ public class List_Rooms_search extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-              /*  GuestHousePojo guestHouseDetails = (GuestHousePojo)	parent.getItemAtPosition(position);
+                GuestHouseSearchPojo guestHousesearchDetails = (GuestHouseSearchPojo)	parent.getItemAtPosition(position);
 
-                Intent roomDetails = new Intent();
-                roomDetails.putExtra(Constants.Room_DETAILS_TO_PASS, guestHouseDetails);
-                roomDetails.setClass(List_Rooms_Activity.this, GuestHouseDetails.class);
+                Intent roomDetailsSearch = new Intent();
+                roomDetailsSearch.putExtra("Details", guestHousesearchDetails);
+                roomDetailsSearch.setClass(List_Rooms_search.this, GuestHouseSearchDetails.class);
 
                 // update database for my favorite member
                 //  memberDetailsDBAdapter.updateFavrouiteList(searchMemberDetails);
-                startActivity(roomDetails);
-                // finish();*/
+                startActivity(roomDetailsSearch);
+                // finish();
             }
         });
     }

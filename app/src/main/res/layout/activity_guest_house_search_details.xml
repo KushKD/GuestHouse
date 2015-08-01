@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/activity_stream"
+    android:background="@drawable/log"
+    android:fadingEdge="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="epds.guesthouse.GuestHouseDetails"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:background="#9C999999">
+
+        <TextView
+            android:id="@+id/tv1_roomDetailsSearch"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv2_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv3_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv4_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv5_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv6_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv7_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv8_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv9_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv10_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+
+        <TextView
+            android:id="@+id/tv11_roomDetailsSearch"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_large_material"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="#F2682715"/>
+    </LinearLayout>
+</ScrollView>
