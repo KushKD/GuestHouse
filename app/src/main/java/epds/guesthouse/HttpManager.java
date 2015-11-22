@@ -9,7 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by HPZ231 on 09-07-2015.
+ * Created by Kush Kumar Dhawan on 09-07-2015.
  */
 public class HttpManager  {
     public static String getData(String uri) {

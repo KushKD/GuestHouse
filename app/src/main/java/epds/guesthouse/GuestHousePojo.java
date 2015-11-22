@@ -7,6 +7,10 @@ import java.io.Serializable;
  */
 public class GuestHousePojo implements Serializable {
 
+    /**
+     * kush kumar dhawan
+     * kushkumardhawan@gmail.com
+     */
 
     private String RoomNo;
     private String FloorEntrance;

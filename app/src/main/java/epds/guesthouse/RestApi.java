@@ -20,12 +20,12 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by HPZ231 on 09-07-2015.
+ * Created by kush kumar Dhawan on 09-07-2015.
  */
 public class RestApi {
 
    
-    private final String urlString //not working
+    private final String urlString= "";//not working
 
     private static String convertStreamToUTF8String(InputStream stream) throws IOException {
         String result = "";
@@ -106,7 +106,7 @@ public class RestApi {
      * Sending User Data to the Server for Registration
      * @author Kush Kumar Dhawan
      * @return Generic ID
-     * @param Firstname , Lastname , MobileNo , AadharId
+     * @param  , Lastname , MobileNo , AadharId
      */
     public JSONObject CreateUserInformation(String FirstName,String LastName,String MobileNo,String AadharID) throws Exception {
         JSONObject result = null;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by HPZ231 on 24-07-2015.
+ * Created by Kush Kumar Dhawan on 24-07-2015.
  */
 public class GuestHouseAdapter extends ArrayAdapter<GuestHousePojo> {
 

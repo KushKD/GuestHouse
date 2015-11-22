@@ -12,6 +12,10 @@ import android.view.WindowManager;
 
 public class Activity_Splash extends Activity {
 
+    /**
+     * kushkumardhawan@gmail.com
+     * Kush Kumar Dhawan
+     */
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 3500;
 
